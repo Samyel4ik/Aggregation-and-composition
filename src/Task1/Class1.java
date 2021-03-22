@@ -35,17 +35,16 @@ public class Class1 {
         if (x == 1) {
             System.out.println("Введите предложение - ");
             String str = scanner.nextLine();
-            Text text1 = addText(text,sentences,str);
+            Text text1 = addText(text, sentences, str);
             System.out.println(text1);
         }
 
         if (x == 2) {
             System.out.println(text);
         }
-        if (x==3){
+        if (x == 3) {
             System.out.println(heading);
         }
-
 
 
     }
