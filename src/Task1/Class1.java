@@ -39,6 +39,14 @@ public class Class1 {
             System.out.println(text1);
         }
 
+        if (x == 2) {
+            System.out.println(text);
+        }
+        if (x==3){
+            System.out.println(heading);
+        }
+
+
 
     }
 
