@@ -10,17 +10,20 @@ public class Class2 {
         Wheel[] wheels = new Wheel[]{
                 new Wheel(15),
                 new Wheel(15),
-                new Wheel(15),
+                new Wheel(16),
                 new Wheel(15)};
 
         Engine engine = new Engine(120);
 
-        Car car = new Car(wheels, engine, "BMW", 20);
+        Car car = new Car(wheels, engine, "BMW", 0);
+
         System.out.println("Выберите пункт меню:" + "\n" +
                 "1.Может ли машина ехть?" + "\n" +
                 "2.Заправиться." + "\n" +
                 "3.Заменить колесо." + "\n" +
-                "4.Марка автомобиля");
+                "4.Марка автомобиля" + "\n" +
+                "5.Выход из меню.");
+
         System.out.print("Ваш выбор - ");
         int z = scanner.nextInt();
 
@@ -47,5 +50,7 @@ public class Class2 {
         if (z == 4) {
             car.printBrand();
         }
+
+
     }
 }
