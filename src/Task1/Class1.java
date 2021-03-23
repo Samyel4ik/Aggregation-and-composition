@@ -1,6 +1,5 @@
 package Task1;
 
-
 import java.util.Scanner;
 
 public class Class1 {
@@ -44,6 +43,7 @@ public class Class1 {
         }
         if (x == 3) {
             System.out.println(heading);
+
         }
 
 
@@ -54,4 +54,5 @@ public class Class1 {
         Text text1 = new Text(text.addSentence(sentences, str));
         return text1;
     }
+
 }
