@@ -7,6 +7,11 @@ public class Class2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        Car car = createACar();
+        finish(scanner, car);
+    }
+
+    public static Car createACar() {
         Wheel[] wheels = new Wheel[]{
                 new Wheel(15),
                 new Wheel(15),
@@ -15,8 +20,10 @@ public class Class2 {
 
         Engine engine = new Engine(120);
 
-        Car car = new Car(wheels, engine, "BMW", 0);
+        return new Car(wheels, engine, "BMW", 0);
+    }
 
+    public static void finish(Scanner scanner, Car car) {
         System.out.println("Выберите пункт меню:" + "\n" +
                 "1.Может ли машина ехть?" + "\n" +
                 "2.Заправиться." + "\n" +
@@ -50,7 +57,5 @@ public class Class2 {
         if (z == 4) {
             car.printBrand();
         }
-
-
     }
 }

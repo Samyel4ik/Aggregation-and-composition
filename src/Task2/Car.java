@@ -21,13 +21,13 @@ public class Car {
 
     public void carRides() {
         if (this.wheels[0].getDiameter() == this.wheels[1].getDiameter() && this.wheels[0].getDiameter() == this.wheels[2].getDiameter() && this.wheels[0].getDiameter() == this.wheels[3].getDiameter()) {
-            System.out.println("Машина может ехать, проблема не в колесах!!!");
+            System.out.println("Проверка колёс прошла успешно!!!");
         } else {
             System.out.println("Машина  НЕ может ехать.");
             System.out.println("Нужна замена колеса, не то радиус!!!");
         }
         if (this.fuel > 0) {
-            System.out.println("Машина может ехать, проблема не в топливе!!!");
+            System.out.println("Проверка топлива прошла успешно!!!");
         } else {
             System.out.println("Машина  НЕ может ехать.");
             System.out.println("Нужна дозаправка топлива!!!");

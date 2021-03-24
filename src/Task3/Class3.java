@@ -7,7 +7,36 @@ import java.util.Scanner;
 public class Class3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        State belarus = newObject();
 
+        finish(scanner, belarus);
+
+    }
+
+    public static void finish(Scanner scanner, State belarus) {
+        System.out.println("Выберите пункт меню:" + "\n" +
+                "1.Вывести на консоль столицу" + "\n" +
+                "2.Количество областей." + "\n" +
+                "3.Площадь государства." + "\n" +
+                "4.Областные центры.");
+        System.out.print("Ваш выбор - ");
+        int x = scanner.nextInt();
+
+        if (x == 1) {
+            belarus.printCapital();
+        }
+        if (x == 2) {
+            belarus.printRegion();
+        }
+        if (x == 3) {
+            belarus.printSquare();
+        }
+        if (x == 4) {
+            belarus.printCapitalRegion();
+        }
+    }
+
+    public static State newObject() {
         Area area = new Area(14, "Воложинский");
         Area area1 = new Area(15, "Держинский");
         Area area2 = new Area(15, "Березенский");
@@ -29,29 +58,7 @@ public class Class3 {
 
         Region[] region = new Region[]{minskii, mogilevskii};
 
-
-        State belarus = new State(region, "Минск", 207000);
-
-        System.out.println("Выберите пункт меню:" + "\n" +
-                "1.Вывести на консоль столицу" + "\n" +
-                "2.Количество областей." + "\n" +
-                "3.Площадь государства." + "\n" +
-                "4.Областные центры.");
-        System.out.print("Ваш выбор - ");
-        int x = scanner.nextInt();
-
-        if (x == 1) {
-            belarus.printCapital();
-        }
-        if (x == 2) {
-            belarus.printRegion();
-        }
-        if (x == 3) {
-        belarus.printSquare();
-        }
-        if (x == 4) {
-        belarus.printCapitalRegion();
-        }
+        return new State(region, "Минск", 207000);
 
     }
 }

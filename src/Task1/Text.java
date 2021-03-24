@@ -2,6 +2,8 @@ package Task1;
 
 import java.util.Arrays;
 
+import static Task1.Sentence.parseSentence;
+
 public class Text {
 
     Sentence[] sentences;
@@ -30,18 +32,10 @@ public class Text {
 
     public Sentence[] addSentence(Sentence[] sentences, String str) {
 
-        String[] wordsNew = str.split(" ");// массив слов
-
-        Word[] words2 = new Word[wordsNew.length];
-
-        for (int i = 0; i < wordsNew.length; i++) {
-            words2[i] = new Word(wordsNew[i]);
-        }
-        Sentence sentence = new Sentence(words2);
-
         sentences = Arrays.copyOf(sentences, sentences.length + 1);
-        sentences[sentences.length - 1] = sentence;
+        sentences[sentences.length - 1] = parseSentence(str);
 
         return sentences;
     }
+
 }

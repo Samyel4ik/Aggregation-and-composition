@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class Class1 {
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Text text = createText();
+        finish(scanner, text);
+    }
+
+    public static Text createText() {
         Word word = new Word("Hello");
         Word word2 = new Word("Java");
         Word word3 = new Word("Cat");
@@ -22,19 +29,23 @@ public class Class1 {
         Sentence sentence1 = new Sentence(words1);
         Sentence[] sentences = new Sentence[]{heading, sentence, sentence1};
 
-        Text text = new Text(sentences); //исходный текст
-        Scanner scanner = new Scanner(System.in);
+        return new Text(sentences); //исходный текст
+
+    }
+
+    public static void finish(Scanner scanner, Text text) {
         System.out.println("Выберите пункт меню:" + "\n" +
                 "1.Дополнить текст." + "\n" +
                 "2.Распечатать текст." + "\n" +
                 "3.Распечатать закголовок текста.");
         System.out.print("Ваш выбор: ");
+
         int x = Integer.parseInt(scanner.nextLine());
 
         if (x == 1) {
             System.out.println("Введите предложение - ");
             String str = scanner.nextLine();
-            Text text1 = addText(text, sentences, str);
+            Text text1 = addText(text, text.getSentences(), str);
             System.out.println(text1);
         }
 
@@ -42,10 +53,10 @@ public class Class1 {
             System.out.println(text);
         }
         if (x == 3) {
-            System.out.println(heading);
+            Sentence[] sentences = text.getSentences();
+            System.out.println(sentences[0]);
 
         }
-
 
     }
 

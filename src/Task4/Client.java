@@ -37,10 +37,10 @@ public class Client {
         }
     }
 
-    public void getBankAccountAmountOfMoney() {
+    public BankAccount[] getBankAccountAmountOfMoney() {
         BankAccount[] bankAccounts = Arrays.copyOf(this.bankAccount, this.bankAccount.length);
         Arrays.sort(bankAccounts, new BankAccountAmountOfMoneyComparator());
-        System.out.println(Arrays.toString(bankAccounts));
+        return bankAccounts;
     }
 
     public int theAmountOfMoneyInAllAccounts() {
